@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateDiff", "DateDiff\DateDiff.csproj", "{1524C9F4-312D-4877-A97F-1E9C65A4D242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateDiffTest", "DateDiffTest\DateDiffTest.csproj", "{2E2271F8-1759-4A55-8031-6D327A38AE01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1524C9F4-312D-4877-A97F-1E9C65A4D242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1524C9F4-312D-4877-A97F-1E9C65A4D242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1524C9F4-312D-4877-A97F-1E9C65A4D242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1524C9F4-312D-4877-A97F-1E9C65A4D242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2271F8-1759-4A55-8031-6D327A38AE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2271F8-1759-4A55-8031-6D327A38AE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2271F8-1759-4A55-8031-6D327A38AE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2271F8-1759-4A55-8031-6D327A38AE01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86C5B077-3D7E-4F8C-B793-845C58508D29}
+	EndGlobalSection
+EndGlobal
