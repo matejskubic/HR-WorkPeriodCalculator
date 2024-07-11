@@ -17,35 +17,22 @@ namespace DateDiff
 
         public static (int years, int months, int days) GetDiff(DateTime from, DateTime to)
         {
-            var cal = System.Globalization.CultureInfo.InvariantCulture.Calendar;
+            var d360From = Get360days(from);
+            var d360To = Get360days(to);
+            var d360Diff = d360To - d360From + 1;
 
-            var d = to.Day - from.Day + 1;
-            var m = to.Month - from.Month;
-            var y = to.Year - from.Year;
-
-            if (d < 0)
-            {
-                d += 30;
-                m--;
-            }
-            if (d == cal.GetDaysInMonth(to.Year, to.Month) || d == 30)
-            {
-                d = 0;
-                m++;
-            }
-
-            if (m < 0)
-            {
-                m += 12;
-                y--;
-            }
-            if (m == 12)
-            {
-                m = 0;
-                y++;
-            }
-
+            var y = d360Diff / 360;
+            d360Diff %= 360;
+            var m = d360Diff / 30;
+            var d = d360Diff % 30;
             return (y, m, d);
+        }
+
+        static int Get360days(DateTime dt)
+        {
+            //var cal = System.Globalization.CultureInfo.InvariantCulture.Calendar;
+            //return dt.Year * 360 + dt.Month * 30 + ((dt.Day > 30) ? 30 : dt.Day);
+            return dt.Year * 360 + dt.Month * 30 + (DateTime.DaysInMonth(dt.Year, dt.Month) == dt.Day ? 30 : dt.Day);
         }
     }
 }
